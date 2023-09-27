@@ -19,6 +19,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getCountCars(Integer count) {
-        return cars.subList(0, (count == null ? 5 : count >= 5 ? 5 : count));
+        return cars.subList(0, (count == null ? 5 : count >= 5 ? 5 : count <= 0 ? 0 : count));
     }
 }
